@@ -1,7 +1,7 @@
 import React from "react";
-import { View, TextInput,StyleSheet, Image } from "react-native";
+import { View, TextInput,StyleSheet, Image, TouchableOpacity } from "react-native";
 import { AntDesign, Feather } from '@expo/vector-icons';
-import { Container, Text } from "../../components";
+import { Container, Text, MenuOpc } from "../../components";
 
 
 export function Home(){
@@ -15,15 +15,10 @@ export function Home(){
                         <TextInput style={styles.input} placeholder="Search Product" underlineColorAndroid="transparent"/>
                     </View>
                 </View>
-                <Text fontsize={36} fontWeight={'600'} marginTop={50}>Find your suitable  watch now.</Text>
+                <Text fontsize={36} fontWeight={'600'} marginTop={50} >Find your suitable  watch now.</Text>
             </View>
             <View style={styles.relogios}>
-                <View style={styles.opcoes}>
-                    <Text fontSize={18} color={'#5B41FF'}  marginHorizontal={5}>Smart Watch</Text>
-                    <Text fontSize={18} color={'#5B41FF'}  marginHorizontal={5}>Casio</Text>
-                    <Text fontSize={18} color={'#5B41FF'}  marginHorizontal={5}>Tissot</Text>
-                    <Text fontSize={18} color={'#5B41FF'}  marginHorizontal={5}>Seiko</Text>
-                </View>
+                <MenuOpc/>
                 <View style={styles.listaRelogios}>
                     <View>
                         <Image source={require('../../../assets/Frame4.png')}/>
@@ -72,13 +67,8 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         padding: 5
     },
-    opcoes:{
-        flexDirection: 'row',
-        alignItems: 'center',
-        
-    },
     relogios:{
-        padding: 30
+        padding: 20
     },
     textoOPC:{
         fontSize: 18,
