@@ -1,29 +1,38 @@
 import React from "react";
-import { View, TextInput,StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View,Text as txt, TextInput,StyleSheet, Image, TouchableOpacity } from "react-native";
 import { AntDesign, Feather } from '@expo/vector-icons';
-import { Container, Text, MenuOpc } from "../../components";
+import { Container, Text, MenuOpc, Header} from "../../components";
+import { FlatList } from "react-native-web";
 
+const FAKE_DATA = [
+    {
+      id: 0,
+      nome: 'teste',
+      desc: 'outro',
+      preco: '999'
+    },
+    {
+      id: 1,
+      image_url:
+        'https://network.grupoabril.com.br/wp-content/uploads/sites/4/2020/02/desafio-jedi-de-mestre-yoda-consertar-as-frases-consegue-vocecc82.jpg?quality=100&strip=info',
+    }
+  ]
 
 export function Home(){
     return(
         <Container>
-            <View style={styles.head}>
-                <View style={styles.test}>
-                    <AntDesign name="bars" size={40} color="black" />
-                    <View style={styles.SectionStyle}>
-                        <AntDesign name="search1" size={30} color="black" />
-                        <TextInput style={styles.input} placeholder="Search Product" underlineColorAndroid="transparent"/>
-                    </View>
-                </View>
-                <Text fontsize={36} fontWeight={'600'} marginTop={50} >Find your suitable  watch now.</Text>
-            </View>
+            <Header/>
             <View style={styles.relogios}>
                 <MenuOpc/>
+
                 <View style={styles.listaRelogios}>
-                    <View>
+                    <View style={{borderWidth: 2}}>
                         <Image source={require('../../../assets/Frame4.png')}/>
                         <Text>Apple Watch</Text>
+                        <Text>Series 7</Text>
+                        <Text>$799</Text>
                     </View>
+                    
                 </View>
 
             </View>
@@ -32,30 +41,6 @@ export function Home(){
 }
 
 const styles = StyleSheet.create({
-    container:{
-        flex:1,
-    },
-    head:{
-        backgroundColor: 'white',
-        justifyContent: 'center',
-        padding: 20
-    },
-    titulo:{
-        fontSize: 36,
-        fontWeight: '600',
-        marginTop: 20
-    },
-    input:{
-        width: 150,
-        height: 50,
-        marginLeft: 10,
-        borderRadius: 30,
-    },
-    test:{
-        marginTop: 50,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-    },
     SectionStyle: {
         flexDirection: 'row',
         justifyContent: 'center',
