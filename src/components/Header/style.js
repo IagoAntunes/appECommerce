@@ -15,7 +15,7 @@ export const CustomHeader2 = styled.View`
     justifyContent: center
     align-items: center
     background-color: #fff
-    border-width: 0.5
+    border-width: 0.5px
     border-color: '#000
     height: 50px
     border-radius: 20px

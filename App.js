@@ -1,4 +1,5 @@
 import React from 'react';
+import AppLoading from 'expo-app-loading';
 import { Home } from './src/screens/Home';
 import {
   useFonts, 
@@ -14,7 +15,9 @@ export default function App() {
     Raleway_600SemiBold,
   })
 
-
+  if (!fontsLoaded) {
+    return <AppLoading />
+  }
 
   return (
       <Home/>

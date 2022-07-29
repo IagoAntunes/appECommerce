@@ -1,14 +1,13 @@
 import React from "react";
-import { TextOpcoes } from '../TextOpcoes'
-import { CustomMenuOpc } from './style';
+import { CustomMenuOpc, TextMenu } from './style';
 
 export const MenuOpc = () => {
     return(
         <CustomMenuOpc >
-          <TextOpcoes>Smart Watch</TextOpcoes>
-          <TextOpcoes>Casio</TextOpcoes>
-          <TextOpcoes>Tissot</TextOpcoes>
-          <TextOpcoes>Seiko</TextOpcoes>
+          <TextMenu>Smart Watch</TextMenu>
+          <TextMenu>Casio</TextMenu>
+          <TextMenu>Tissot</TextMenu>
+          <TextMenu>Seiko</TextMenu>
         </CustomMenuOpc>
     )
 }
