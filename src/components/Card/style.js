@@ -1,12 +1,14 @@
 import styled from "styled-components/native";
-
+import { fonts} from '../../styles/fonts'
 
 export const Frame = styled.TouchableOpacity`
-    width: ${({ theme }) => theme.metrics.px(88)}px;
-    height: ${({ theme }) => theme.metrics.px(124)}px;
-    border-radius: ${({ theme }) => theme.metrics.px(8)}px;
+    display: flex
+    border-width: 0.2px
+    border-radius: 20px
+    padding: 10px
+    background-color: white
+    margin: 5px
+    width: 157px
+    height: 250px
     overflow: hidden;
-    margin-right: ${({ theme }) => theme.metrics.px(12)}px;
-    background-color: blue
-
 `

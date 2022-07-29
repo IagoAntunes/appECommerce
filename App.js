@@ -5,7 +5,8 @@ import {
   useFonts, 
   Raleway_700Bold,
   Raleway_500Medium, 
-  Raleway_600SemiBold 
+  Raleway_600SemiBold,
+  Raleway_300Light
   } from '@expo-google-fonts/raleway';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
     Raleway_700Bold,
     Raleway_500Medium,
     Raleway_600SemiBold,
+    Raleway_300Light
   })
 
   if (!fontsLoaded) {
